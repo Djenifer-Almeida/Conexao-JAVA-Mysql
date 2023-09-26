@@ -6,12 +6,12 @@ import java.sql.DriverManager;
 public class ConexaoBanco {
     public Connection getConnection(){
         try {
-            return DriverManager.getConnection("jdbc:mysql://127.0.0.1/provinha","root","");
+            return DriverManager.getConnection("jdbc:mysql://127.0.0.1/ "," ","");
         }catch (Exception erro){
             throw new RuntimeException(erro);
         }
         }
-    //***** Chamando método principal para testarmos a conexão
+    //Método principal para a conexão//
     public static void main(String[] args) {
         try{
             new ConexaoBanco().getConnection();
